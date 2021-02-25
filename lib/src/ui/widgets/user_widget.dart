@@ -47,18 +47,20 @@ class UserWidget extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     '${user.name.first} ${user.name.last}',
-                    style:
-                        TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
                   ),
                   SizedBox(height: 10.0),
                   Text(
                     user.name.title,
-                    style: TextStyle(fontSize: 20.0),
+                    style: TextStyle(fontSize: 20.0, color: Colors.black),
                   ),
                   SizedBox(height: 10.0),
                   Text(
                     '${user.location.street.name} #${user.location.street.number}',
-                    style: TextStyle(fontSize: 20.0),
+                    style: TextStyle(fontSize: 20.0, color: Colors.black),
                   ),
                   SizedBox(
                       height: 80,
@@ -77,6 +79,9 @@ class UserWidget extends StatelessWidget {
                                     'InprodiMx agradece tu recomendación.',
                               );
                             },
+                          ),
+                          SizedBox(
+                            width: 10,
                           ),
                           BottomRaisedWidget(
                             title: 'ME INTERESA',
