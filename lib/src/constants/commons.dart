@@ -4,3 +4,4 @@ final appName = 'InprodiMx';
 final urlBase = '';
 
 final primaryColor = Color(0xFF002983);
+final yellowColor = Colors.yellow;

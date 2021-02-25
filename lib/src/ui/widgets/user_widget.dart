@@ -12,13 +12,21 @@ class UserWidget extends StatelessWidget {
           boxShadow: [BoxShadow(blurRadius: 1, offset: Offset.infinite)]),
       child: Stack(
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
-            height: 450,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(user.picture.large),
-                    fit: BoxFit.cover)),
+          InkWell(
+            onTap: () =>
+                Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return UserPage(
+                user: user,
+              );
+            })),
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              height: 450,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(user.picture.large),
+                      fit: BoxFit.cover)),
+            ),
           ),
           Positioned(
             top: 250,
@@ -57,7 +65,6 @@ class UserWidget extends StatelessWidget {
                       width: double.infinity,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        // crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           BottomRaisedWidget(
                             title: 'RECOMENDAR',
@@ -71,7 +78,6 @@ class UserWidget extends StatelessWidget {
                               );
                             },
                           ),
-                          // SizedBox(width,: 10.0),
                           BottomRaisedWidget(
                             title: 'ME INTERESA',
                             accion: () {
@@ -105,6 +111,34 @@ class UserWidget extends StatelessWidget {
               right: 40,
               left: 40,
               child: AvatarWidget(user.picture.large, radius: 60)),
+          Positioned(
+              top: 20,
+              right: 40,
+              left: 40,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.copyright_sharp,
+                    color: yellowColor,
+                    size: 40,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    '\$1000',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  Spacer(),
+                  CircleAvatar(
+                    backgroundColor: yellowColor,
+                    child: IconButton(
+                      icon: Icon(Icons.more_vert),
+                      onPressed: () {},
+                    ),
+                  )
+                ],
+              )),
         ],
       ),
     );

@@ -6,32 +6,24 @@ import 'package:inprodi/src/logic/bloc/user/user_bloc.dart';
 
 import 'package:inprodi/src/ui/pages/home/home_page.dart';
 
-import 'src/ui/widgets/widgets.dart';
-
 class App extends StatelessWidget {
   final _navigatorKey = GlobalKey<NavigatorState>();
-
-  NavigatorState get _navigator => _navigatorKey.currentState;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Infinite Scroll',
-      theme: ThemeData(primaryColor: primaryColor),
+      title: 'InprodiMx',
+      theme: ThemeData(primaryColor: primaryColor, brightness: Brightness.dark),
       navigatorKey: _navigatorKey,
       onGenerateRoute: (_) => HomePage.route(),
-      home: Scaffold(
-          appBar: AppBar(
-            brightness: Brightness.dark,
-            title: Center(child: Text('InprodiMX')),
-          ),
-          body: BlocProvider(
-            create: (context) =>
-                UserBloc(httpClient: http.Client())..add(UserFetched()),
-            child: HomePage(),
-          ),
-          bottomNavigationBar: MyBottomAppBar(_navigator)),
+      builder: (context, child) {
+        return BlocProvider(
+          create: (context) =>
+              UserBloc(httpClient: http.Client())..add(UserFetched()),
+          child: child,
+        );
+      },
     );
   }
 }
