@@ -1,6 +1,13 @@
 part of 'widgets.dart';
 
-class MyBottomAppBar extends StatelessWidget {
+class MyBottomAppBar extends StatefulWidget {
+  MyBottomAppBar(NavigatorState navigator);
+
+  @override
+  _MyBottomAppBarState createState() => _MyBottomAppBarState();
+}
+
+class _MyBottomAppBarState extends State<MyBottomAppBar> {
   @override
   Widget build(BuildContext context) {
     return new BottomAppBar(
@@ -16,7 +23,12 @@ class MyBottomAppBar extends StatelessWidget {
                 LineIcons.home,
               ),
               color: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                // navigator.pushAndRemoveUntil<void>(
+                HomePage();
+                // (route) => false,
+                // );
+              },
             ),
             IconButton(
               icon: Icon(
@@ -24,7 +36,9 @@ class MyBottomAppBar extends StatelessWidget {
                 size: 30,
               ),
               color: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                PageOne();
+              },
             ),
             IconButton(
               icon: Icon(

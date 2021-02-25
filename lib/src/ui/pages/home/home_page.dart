@@ -3,12 +3,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:inprodi/src/logic/bloc/user/user_bloc.dart';
 import 'package:inprodi/src/ui/widgets/widgets.dart';
 
-
 import 'package:inprodi/src/models/models.dart';
 
 List<User> users = [];
 
 class HomePage extends StatefulWidget {
+  static Route route() {
+    return MaterialPageRoute<void>(builder: (_) => HomePage());
+  }
+
   @override
   _HomePageState createState() => _HomePageState();
 }
