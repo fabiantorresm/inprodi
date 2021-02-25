@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "232623389384",
+    "project_id": "inprodimx-e6902",
+    "storage_bucket": "inprodimx-e6902.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232623389384:android:1bde4721fdedfc429703fd",
+        "android_client_info": {
+          "package_name": "com.fabiantorresm.inprodi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232623389384-b6do2pso2ijhl4tvgrmenhvil2c75i36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fabiantorresm.inprodi",
+            "certificate_hash": "cc3a504942684b3375a65bec49e341273d82db51"
+          }
+        },
+        {
+          "client_id": "232623389384-24fu5o79kcqamcl4kgbpvn8rao5ca23t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVXQhOiBVG1gPNmha0nyTHE6WeAmRROvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232623389384-24fu5o79kcqamcl4kgbpvn8rao5ca23t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
